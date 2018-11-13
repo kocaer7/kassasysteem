@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Kassa</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -62,34 +62,48 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
                     @endauth
+                    <p style="font-size: 50px;">0.00 Euro</p>
                 </div>
             @endif
+                <h1>Eten</h1>
+                <div class="grid-container">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">Brood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">BruinBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">WitBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HalfBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">ZwartBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HeleBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">GroteBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
                 </div>
+                <hr>
+                <h1>Drinken</h1>
+                <div class="grid-container">
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">Brood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">BruinBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">WitBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HalfBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">ZwartBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HeleBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">GroteBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
+                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
                 </div>
-            </div>
         </div>
     </body>
 </html>
