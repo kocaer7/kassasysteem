@@ -1,0 +1,214 @@
+:root {
+  --black: #000;
+  --white: #fff;
+
+  // Pallete colors
+  // color palette Blue Grey used from: https://material.io/guidelines/style/color.html#color-color-palette
+  --c50:#ECEFF1;
+  --c100:#CFD8DC;
+  --c200:#B0BEC5;
+  --c300:#90A4AE;
+  --c400:#78909C;
+  --c500:#607D8B;
+  --c600:#546E7A;
+  --c700:#455A64;
+  --c800:#37474F;
+  --c900:#263238;
+
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: rgb(135,224,253);
+  background: -moz-linear-gradient(-45deg, rgba(135,224,253,1) 0%, rgba(5,171,224,1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(135,224,253,1) 0%,rgba(5,171,224,1) 100%);
+  background: linear-gradient(135deg, #445963 0%, #273238 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 );
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+
+  &__outer {
+
+  }
+
+  &__innner {
+
+  }
+
+}
+
+.header {
+  text-align: center;
+  margin-top: 40px;
+
+  &__title {
+    color: var(--c50);
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__sub-title {
+    color: var(--c100);
+    margin: 10px 0 0 0;
+  }
+}
+
+.palette {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-top-left-radius: 20%;
+    box-shadow: -5px -1px 6px 0px var(--black);
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+
+    &--color1 {background: var(--c50);}
+    &--color2 {background: var(--c100);}
+    &--color3 {background: var(--c200);}
+    &--color4 {background: var(--c300);}
+    &--color5 {background: var(--c400);}
+    &--color6 {background: var(--c500);}
+    &--color7 {background: var(--c600);}
+    &--color8 {background: var(--c700);}
+    &--color9 {background: var(--c800);}
+    &--color10 {background: var(--c900);}
+
+    &-copy {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX( -50% );
+    }
+
+  }
+}
+
+.grid {
+  // 	This grid could easily be archivable with just a few lines of html/css but I just wanted to go a little bit furder and play with grid areas.
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat( 4, 1fr );
+  grid-template-rows: repeat( 6, 1fr );
+  grid-template-areas:
+          "output output output output"
+          "clear clear clear divided"
+          "seven eight nine multiplied"
+          "four five six minus"
+          "one two three plus"
+          "zero zero zero equals";
+
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid var(--c700);
+  color: var(--c200);
+  border-radius: 5px;
+
+  &__item {
+    border: 1px solid var(--c900);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursour: pointer;
+    transition: background 0.5s ease;
+
+    &:hover {
+      background: var(--c600);
+    }
+  }
+
+  &__output {
+    grid-area: output;
+    text-align: right;
+  }
+
+  &__clear {
+    grid-area: clear;
+  }
+
+  &__divided {
+    grid-area: divided;
+  }
+
+  &__seven {
+    grid-area: seven;
+  }
+
+  &__eight {
+    grid-area: eight;
+  }
+
+  &__nine {
+    grid-area: nine;
+  }
+
+  &__multiplied {
+    grid-area: multiplied;
+  }
+
+  &__four {
+    grid-area: four;
+  }
+
+  &__five {
+    grid-area: five;
+  }
+
+  &__six {
+    grid-area: six;
+  }
+
+  &__minus {
+    grid-area: minus;
+  }
+
+  &__one {
+    grid-area: one;
+  }
+
+  &__two {
+    grid-area: two;
+  }
+
+  &__three {
+    grid-area: three;
+  }
+
+  &__plus {
+    grid-area: plus;
+  }
+
+  &__zero {
+    grid-area: zero;
+  }
+
+  &__equals {
+    grid-area: equals;
+  }
+
+}
+
