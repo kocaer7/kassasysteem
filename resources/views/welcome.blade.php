@@ -63,6 +63,7 @@
             }
         </style>
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/scss/kassa.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -77,33 +78,46 @@
                     <p style="font-size: 50px;">0.00 Euro</p>
                 </div>
             @endif
-                <h1>Eten</h1>
-                <div class="grid-container">
 
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">Brood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">BruinBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">WitBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HalfBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">ZwartBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HeleBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">GroteBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
-                </div>
-                <hr>
-                <h1>Drinken</h1>
-                <div class="grid-container">
+                <form name="calculator">
+                    <div class="container__grid grid">
 
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">Brood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">BruinBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">WitBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HalfBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">ZwartBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">HeleBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('admin/adminIndex')!!}" class="btn btn-primary">GroteBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
-                    <div class="grid-item"><a href="{!! url('products/aboutIndex')!!}" class="btn btn-primary">OranjeBrood</a></div>
-                </div>
+
+                        <div class="grid__item grid__output"><input type="text" name="display" id="display" disabled></div>
+                        @foreach ($products AS $key => $product)
+                            {{$product->id}}
+                            <div class="grid__item grid__{{$key}}}}"><input type="button" name="one" value="<?php ?>" onclick="calculator.display.value += '1'"></div>
+                        @endforeach
+                                <div class="grid__item grid__one"><input type="button" name="one" value="<?php ?>" onclick="calculator.display.value += '1'"></div>
+                                <div class="grid__item grid__two"><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></div>
+                                <div class="grid__item grid__three"><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></div>
+                                <div class="grid__item grid__plus"><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></div>
+
+
+
+                                <div class="grid__item grid__four"><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></div>
+                                <div class="grid__item grid__five"><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></div>
+                                <div class="grid__item grid__six"><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></div>
+                                <div class="grid__item grid__minus"><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></div>
+
+                                <div class="grid__item grid__seven"><input  type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></div>
+                        <div class="grid__item grid__eight"><input  type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></div>
+                                <div class="grid__item grid__nine"><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></div>
+                                <div class="grid__item grid__multiplied"><input  type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></div>
+
+                                <div class="grid__item grid__clear"><input style=""  type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></div>
+                                <div class="grid__item grid__zero"><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></div>
+                        <div class="grid__item grid__equals"><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></div>
+                                <div class="grid__item grid__divided"><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></div>
+
+                    </div>
+                </form>
         </div>
+
+
+
+
+
+
     </body>
 </html>
