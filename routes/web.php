@@ -19,4 +19,16 @@ Route::get('create', function () {
     return view('products.create');
 });
 
+Route::get('createsub', function () {
+    return view('subcategories.create');
+});
+
+Route::get('createcategorie', function () {
+    return view('categories.create');
+});
+
+route::resource('subcategories','SubcategoriesController');
+
+route::resource('categories','CategoriesController');
+
 route::resource('products','ProductsController');
