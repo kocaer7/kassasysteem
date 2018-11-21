@@ -1,7 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
+<<<<<<< HEAD
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+=======
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+>>>>>>> 26c4874a865000c7e73a319a9d33bc5a8dd1003d
         "This file is @generated automatically"
     ],
     "content-hash": "66ca7343889332c2b8ecca11c251430c",
@@ -454,6 +458,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v5.7.13",
             "source": {
                 "type": "git",
@@ -464,6 +469,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/3ff3110ac14f2b4876acaff289bb55a1af74f02e",
                 "reference": "3ff3110ac14f2b4876acaff289bb55a1af74f02e",
+=======
+            "version": "v5.7.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "4cb5bf13e0cd50015f8e6a420a52fa8b90758eb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4cb5bf13e0cd50015f8e6a420a52fa8b90758eb1",
+                "reference": "4cb5bf13e0cd50015f8e6a420a52fa8b90758eb1",
+>>>>>>> 26c4874a865000c7e73a319a9d33bc5a8dd1003d
                 "shasum": ""
             },
             "require": {
@@ -529,7 +546,10 @@
                 "aws/aws-sdk-php": "^3.0",
                 "doctrine/dbal": "^2.6",
                 "filp/whoops": "^2.1.4",
+<<<<<<< HEAD
                 "guzzlehttp/guzzle": "^6.3",
+=======
+>>>>>>> 26c4874a865000c7e73a319a9d33bc5a8dd1003d
                 "league/flysystem-cached-adapter": "^1.0",
                 "mockery/mockery": "^1.0",
                 "moontoast/math": "^1.1",
@@ -594,7 +614,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2018-11-07T12:41:02+00:00"
+=======
+            "time": "2018-10-30T14:44:34+00:00"
+>>>>>>> 26c4874a865000c7e73a319a9d33bc5a8dd1003d
         },
         {
             "name": "laravel/tinker",

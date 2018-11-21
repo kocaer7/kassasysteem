@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+pagination > li > a,
+.pagination > li > span {
+    color: black; // use your own color here
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: black;
+    border-color: black;
+}
+
+>>>>>>> 26c4874a865000c7e73a319a9d33bc5a8dd1003d
 @import url(https://fonts.googleapis.com/css?family=Nunito);/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

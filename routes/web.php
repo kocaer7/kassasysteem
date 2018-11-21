@@ -11,7 +11,13 @@
 |
 */
 
+
 Auth::routes();
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index')->name('adminlogin');
+
+Route::get('/producten', 'ProductController@index');
+Route::get('/search', 'ProductController@search');
+Route::resource('products','ProductController');
+
